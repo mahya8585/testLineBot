@@ -1,2 +1,5 @@
-# testLineBot
-Line message API であそぶ
+# LINE botで遊んでみた系リポジトリ
+
+1. LINE bot をとりあえず動かす ←イマココ
+2. ちゃんとbot化する
+3. あわよくばAI化する
