@@ -2,9 +2,12 @@ package jp.maaya.linebot.test;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.convert.ConversionService;
+import org.springframework.format.support.DefaultFormattingConversionService;
 import org.springframework.web.filter.CharacterEncodingFilter;
 
 import javax.servlet.Filter;
+import javax.sql.DataSource;
 
 /**
  * Config
@@ -12,6 +15,8 @@ import javax.servlet.Filter;
  */
 @Configuration
 public class AppConfig {
+
+    DataSource dataSource;
 
     /**
      * リクエストのエンコーディングをUTF-8にします。
@@ -22,5 +27,11 @@ public class AppConfig {
         filter.setEncoding("UTF-8");
         filter.setForceEncoding(true);
         return filter;
+    }
+
+    @Bean
+    public static ConversionService conversionService() {
+        ConversionService conversionService = new DefaultFormattingConversionService();
+        return conversionService;
     }
 }

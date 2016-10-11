@@ -7,7 +7,6 @@ import lombok.Data;
  */
 @Data
 public class Message {
-    String id;
     String type;
     String text;
 }

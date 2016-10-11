@@ -47,6 +47,8 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter-thymeleaf:1.4.0.RELEASE'
     compile 'org.projectlombok:lombok:1.16.10'
 
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
+
     testCompile 'junit:junit:4.11'
     testCompile 'org.springframework:spring-test:2.5'
 }
